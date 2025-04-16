@@ -1,3 +1,5 @@
+# Bianca Pop
+
 import math, os, pickle, re
 from typing import Tuple, List, Dict
 
@@ -86,6 +88,7 @@ class BayesClassifier:
                 self.update_dict(filtered_tokens, self.pos_freqs)
             elif filename.startswith(self.neg_file_prefix):
                 self.update_dict(filtered_tokens, self.neg_freqs)
+
 
         self.save_dict(self.pos_freqs, self.pos_filename)
         self.save_dict(self.neg_freqs, self.neg_filename)
